@@ -9,5 +9,4 @@ const connectdb = ()=>{
         console.log();
     })
 }
-connectdb()
 module.exports = connectdb

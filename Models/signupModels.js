@@ -5,6 +5,15 @@ const userSchema = mongoose.Schema({
     lastname: {type:String,required:true},
     password: {type:String,required:true},
     email: {type:String,required:true, unique:true },
+    cart: [
+        {
+          productId: { type: mongoose.Schema.Types.ObjectId, required: true },
+          quantity: { type: Number, required: true },
+          productprice: { type: Number, required: true },
+          productdescription: { type: String, required: true },
+          productname: { type: String, required: true },
+        }
+      ]
 }, {timeStamps:true})
 
 
